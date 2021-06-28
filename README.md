@@ -59,8 +59,7 @@ spring:
 5. `503 Service Unavailable`
 
     解决: 
-   1. 检查各个版本是否对应。版本对应见：[版本说明](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98
-      %8E) 
+   1. 检查各个版本是否对应。版本对应见：[版本说明](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E) 
    2. 2020.0以上版本需要依赖`spring-cloud-starter-loadbalancer` [见issue 2011](https://github.com/alibaba/spring-cloud-alibaba/issues/2011)
    
    
