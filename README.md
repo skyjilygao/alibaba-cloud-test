@@ -1,3 +1,6 @@
+#### 如何配置
+1. `bootstrap.yml`中命名空间namespace每次都不一样，所以需要根据自己的命名空间配置下
+2. nacos中配置文件参考 `config/`下的engine，gateway文件
 
 #### 问题
 1. `server is DOWN now, please try again later!`
