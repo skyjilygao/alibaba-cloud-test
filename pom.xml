@@ -8,6 +8,8 @@
         <module>cloud-common</module>
         <module>cloud-engine</module>
         <module>cloud-gateway</module>
+        <!--<module>nacos-provider</module>
+        <module>nacos-client</module>-->
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

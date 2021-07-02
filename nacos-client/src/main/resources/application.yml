@@ -1,0 +1,10 @@
+# https://blog.csdn.net/magi1201/article/details/112872808
+server:
+  port: 7079
+spring:
+  application:
+    name: nacos-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
