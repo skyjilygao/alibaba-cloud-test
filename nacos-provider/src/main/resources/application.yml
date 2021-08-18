@@ -1,6 +1,6 @@
 # https://blog.csdn.net/magi1201/article/details/112872808
 server:
-  port: 7082
+  port: 7080
 spring:
   application:
     name: nacos-provider

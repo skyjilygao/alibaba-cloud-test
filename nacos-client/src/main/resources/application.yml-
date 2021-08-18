@@ -1,0 +1,28 @@
+# https://blog.csdn.net/magi1201/article/details/112872808
+# https://github.com/alibaba/spring-cloud-alibaba/blob/master/pom.xml
+server:
+  port: 7079
+
+spring:
+  application:
+    name: nacos-client
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      # 路由数组[路由 就是指定当请求满足什么条件的时候转到哪个微服务]
+      routes:
+        - id: sky-cloud-gateway
+          # ⽬标服务地址（部署多实例）
+          uri: lb://nacos-client
+          # gateway⽹关从服务注册中⼼获取实例信息然后负载后路由
+          # 断⾔：路由条件，Predicate 接受⼀个输⼊参数，返回⼀个布尔值结果。该接⼝包含多种默认⽅法来将 Predicate 组合成其他复杂的逻辑（⽐如：与，或，⾮）。
+          predicates:
+            - Path=/api/**
+          #            - Method=GET
+          filters: # 过滤器,请求在传递过程中可以通过过滤器对其进行一定的修改
+            - StripPrefix=1              # 转发之前去掉1层路径
