@@ -11,14 +11,14 @@ import java.time.ZonedDateTime;
 @RequestMapping("/test")
 public class TestController {
 
+    private static Integer count = 0;
     @Value("${server.port}")
     private Integer port;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String sayHello(String name){
-        return "hello " + name +", this server port: " + port + ", time: " + ZonedDateTime.now();
+        return "hello " + name +", this server port: " + port + ", time: " + ZonedDateTime.now() +" \t count="+(++count);
     }
-
     public Integer getPort() {
         return port;
     }
